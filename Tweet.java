@@ -143,7 +143,7 @@ public class Tweet {
     }
 
     /**
-     * Retrieves the caption of this tweet.
+     * Gets the caption of this tweet.
      * <br>
      * <hr>
      * <strong>Example usage:</strong>
@@ -176,7 +176,7 @@ public class Tweet {
     }
 
     /**
-     * Retrieves the date when this tweet was posted.
+     * Gets the date when this tweet was posted.
      * <br>
      * <hr>
      * <strong>Example usage:</strong>
@@ -224,7 +224,7 @@ public class Tweet {
     }
 
     /**
-     * Increases the number of likes on this tweet by 1.
+     * Increases the number of likes on this tweet by one.
      * <br>
      * <hr>
      * <strong>Example Usage:</strong>
