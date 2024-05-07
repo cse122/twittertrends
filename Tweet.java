@@ -24,7 +24,7 @@ public class Tweet {
      * <hr>
      * <strong>Example Usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("path/to/photo.jpg", "Gumball in a ball!", "2024-05-07", 100, 20);
+     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
      * }
      * <hr>
      * @param photoString  The file path of the photo
@@ -64,7 +64,7 @@ public class Tweet {
      * <hr>
      * <strong>Example Usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("path/to/photo.jpg", "Look at Gumball!", "2024-05-07");
+     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
      * }
      * <hr>
      * @param photoString The file path of the photo
@@ -83,7 +83,7 @@ public class Tweet {
      * <hr>
      * <strong>Example usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("path/to/photo.jpg", "More Gumball", "2024-05-07", 100, 20);
+     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
      * System.out.println(tweet.getPhotoString()); // Output will be the color string representation of the photo.
      * }
      * <hr>
@@ -99,8 +99,8 @@ public class Tweet {
      * <hr>
      * <strong>Example usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("path/to/photo.jpg", "Sunset at the beach", "2024-05-07", 100, 20);
-     * System.out.println(tweet.getFilename()); // Output: "path/to/photo.jpg"
+     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
+     * System.out.println(tweet.getFilename()); // Output: "gumball/flowers.png"
      * }
      * <hr>
      * @return  The filename of this Tweets's photo
@@ -115,7 +115,7 @@ public class Tweet {
      * <hr>
      * <strong>Example usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("path/to/photo.jpg", "Look at IronFirstNoMercy!", "2024-05-07", 150, 30);
+     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
      * Color[][] pixels = tweet.getPhotoPixels();
      * }
      * <hr>
@@ -131,7 +131,7 @@ public class Tweet {
      * <hr>
      * <strong>Example usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("path/to/photo.jpg", "Autumn leaves", "2023-05-07", 80, 15);
+     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
      * Color[][] newPixels = new Color[17][17]; // Assume this is initialized appropriately.
      * tweet.updatePhoto(newPixels);
      * }
@@ -148,8 +148,8 @@ public class Tweet {
      * <hr>
      * <strong>Example usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("path/to/photo.jpg", "Hiroshi's Poke!", "2024-05-07", 200, 50);
-     * System.out.println(tweet.getCaption()); // Output: "Hiroshi's Poke!"
+     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
+     * System.out.println(tweet.getCaption()); // Output: "Gumball :D"
      * }
      * <hr>
      * @return The caption of the tweet
@@ -164,7 +164,7 @@ public class Tweet {
      * <hr>
      * <strong>Example usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("path/to/photo.jpg", "2024 Met Gala", "2023-05-07", 200, 50);
+     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
      * tweet.updateCaption("CSE 122 rocks!");
      * System.out.println(tweet.getCaption()); // Output: "CSE 122 rocks!"
      * }
@@ -181,7 +181,7 @@ public class Tweet {
      * <hr>
      * <strong>Example usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("path/to/photo.jpg", "National Hot Dog Day!", "2024-05-07", 300, 100);
+     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
      * System.out.println(tweet.getDate()); // Output: "2024-05-07"
      * }
      * <hr>
