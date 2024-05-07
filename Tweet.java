@@ -126,13 +126,13 @@ public class Tweet {
     }
 
     /**
-     * Updates the photo with a new set of pixels. This method does not update the photo's filename.
+     * Updates the photo with a new set of pixels.
      * <br>
      * <hr>
      * <strong>Example usage:</strong>
      * {@snippet :
      * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
-     * Color[][] newPixels = new Color[17][17]; // Assume this is initialized appropriately.
+     * Color[][] newPixels = new Color[17][17];
      * tweet.updatePhoto(newPixels);
      * }
      * <hr>
@@ -305,7 +305,7 @@ public class Tweet {
      * {@snippet :
      * Tweet tweet1 = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
      * Tweet tweet2 = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
-     * System.out.println("Are both tweets equal?? " + tweet1.equals(tweet3)); // Output: true if all attributes are identical
+     * System.out.println("Are both tweets equal?? " + tweet1.equals(tweet2)); // Output: true if all attributes are identical
      * }
      * <hr>
      * @param other The object to compare against
