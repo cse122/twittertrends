@@ -67,10 +67,10 @@ public class Tweet {
      * Tweet tweet = new Tweet("path/to/photo.jpg", "Look at Gumball!", "2024-05-07");
      * }
      * <hr>
-     * @param photoString the file path of the photo
-     * @param caption     the caption of the tweet
-     * @param date        the date of the tweet
-     * @throws IllegalArgumentException if photo dimensions are smaller than {@code PHOTO_SIZE}
+     * @param photoString The file path of the photo
+     * @param caption     The caption of the tweet
+     * @param date        The date of the tweet
+     * @throws IllegalArgumentException If photo dimensions are smaller than {@code PHOTO_SIZE}
      */
     public Tweet(String photoString, String caption, String date) {
         this(photoString, caption, date,
@@ -87,7 +87,7 @@ public class Tweet {
      * System.out.println(tweet.getPhotoString()); // Output will be the color string representation of the photo.
      * }
      * <hr>
-     * @return the string representation of the resized photo
+     * @return The string representation of the resized photo
      */
     public String getPhotoString() {
         return photoToString(this.photo.getPixels());
@@ -119,17 +119,11 @@ public class Tweet {
      * Color[][] pixels = tweet.getPhotoPixels();
      * }
      * <hr>
-     * @return a 2D array of {@link Color} objects representing the photo.
+     * @return A 2D array of {@link Color} objects representing the photo.
      */
     public Color[][] getPhotoPixels() {
         return this.photo.getPixels();
     }
-
-    // /**
-    //  * Updates the photo of this tweet to match the given 2D array of Color objects. Does not represent the photo filename!
-    //  *
-    //  * @param pixels  The 2D array of Color objects representing the new photo.
-    //  */
 
     /**
      * Updates the photo with a new set of pixels. This method does not update the photo's filename.
@@ -142,7 +136,7 @@ public class Tweet {
      * tweet.updatePhoto(newPixels);
      * }
      * <hr>
-     * @param pixels the new 2D array of {@link Color} objects for the photo
+     * @param pixels The new 2D array of {@link Color} objects for the photo
      */
     public void updatePhoto(Color[][] pixels) {
         this.photo.setPixels(pixels);
@@ -158,7 +152,7 @@ public class Tweet {
      * System.out.println(tweet.getCaption()); // Output: "Hiroshi's Poke!"
      * }
      * <hr>
-     * @return the caption of the tweet
+     * @return The caption of the tweet
      */
     public String getCaption() {
         return this.caption;
@@ -175,7 +169,7 @@ public class Tweet {
      * System.out.println(tweet.getCaption()); // Output: "CSE 122 rocks!"
      * }
      * <hr>
-     * @param caption the new caption to set for the tweet.
+     * @param caption The new caption to set for the tweet.
      */
     public void updateCaption(String caption) {
         this.caption = caption;
@@ -191,7 +185,7 @@ public class Tweet {
      * System.out.println(tweet.getDate()); // Output: "2024-05-07"
      * }
      * <hr>
-     * @return the date of the tweet
+     * @return The date of the tweet
      */
     public String getDate() {
         return this.date;
@@ -207,7 +201,7 @@ public class Tweet {
      * System.out.println(tweet.getLikes()); // Output: 250
      * }
      * <hr>
-     * @return the number of likes on the tweet
+     * @return The number of likes on the tweet
      */
     public int getLikes() {
         return this.likes;
@@ -223,7 +217,7 @@ public class Tweet {
      * System.out.println("Retweets: " + tweet.getRetweets()); // Output: Retweets: 40
      * }
      * <hr>
-     * @return the number of retweets on the tweet
+     * @return The number of retweets on the tweet
      */
     public int getRetweets() {
         return this.retweets;
@@ -293,7 +287,7 @@ public class Tweet {
      * // Likes: 250  |  Retweets: 40
      * }
      * <hr>
-     * @return the string representation of the tweet
+     * @return The string representation of the tweet
      */
     public String toString() {
         return this.date + "\n" +
@@ -309,25 +303,25 @@ public class Tweet {
      * <hr>
      * <strong>Example Usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
-     * System.out.println("Are both tweets equal?? " + post1.equals(post2)); // Output: true if all attributes are identical
+     * Tweet tweet1 = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
+     * Tweet tweet2 = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
+     * System.out.println("Are both tweets equal?? " + tweet1.equals(tweet3)); // Output: true if all attributes are identical
      * }
      * <hr>
-     * @param other the object to compare against
-     * @return true if the other object is a Tweet with identical photo, caption, date, likes, and retweets
+     * @param other The object to compare against
+     * @return True if the other object is a Tweet with identical photo, caption, date, likes, and retweets
      */
     public boolean equals(Object other) {
         if (other == this) {
             return true;
         } else if (other instanceof Tweet) {
-            Tweet otherPost = (Tweet) other;
+            Tweet otherTweet = (Tweet) other;
             return (
-                    this.photo.equals(otherPost.photo) &&
-                    this.caption.equals(otherPost.caption) &&
-                    this.date.equals(otherPost.date) &&
-                    this.likes == otherPost.likes &&
-                    this.retweets == otherPost.retweets);
+                    this.photo.equals(otherTweet.photo) &&
+                    this.caption.equals(otherTweet.caption) &&
+                    this.date.equals(otherTweet.date) &&
+                    this.likes == otherTweet.likes &&
+                    this.retweets == otherTweet.retweets);
         }
         return false;
     }
