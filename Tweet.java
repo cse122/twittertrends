@@ -224,7 +224,7 @@ public class Tweet {
     }
 
     /**
-     * Increases the number of likes on this tweet by one.
+     * Increases the number of likes on this tweet by 1.
      * <br>
      * <hr>
      * <strong>Example Usage:</strong>
@@ -240,7 +240,7 @@ public class Tweet {
     }
 
     /**
-     * Decreases the number of likes on this tweet by one.
+     * Decreases the number of likes on this tweet by 1.
      * <br>
      * <hr>
      * <strong>Example Usage:</strong>
