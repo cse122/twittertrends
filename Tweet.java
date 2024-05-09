@@ -2,9 +2,9 @@ import java.awt.Color;
 import java.util.*;
 
 /**
- * The {@code Tweet} class represents a post with an associated photo, caption, date, and likes.
- * The class provides methods to retrieve and manipulate the post information, 
- * including resizing the photo and generating a formatted string representation of the post.
+ * The {@code Tweet} class represents a tweet with an associated photo, caption, date, and likes.
+ * The class provides methods to retrieve and manipulate the tweet information, 
+ * including resizing the photo and generating a formatted string representation of the tweet.
  */
 public class Tweet {
 
@@ -329,7 +329,7 @@ public class Tweet {
     // PRIVATE HELPER METHDOS /////////////////////////////////////////////////////////////////////
 
     /**
-     * Resizes the provided photo for this post to be of PHOTO_SIZE in each dimension.
+     * Resizes the provided photo for this tweet to be of PHOTO_SIZE in each dimension.
      * The central sqaure will be selected.
      *
      * @param The 2D color representation of the original photo
@@ -381,7 +381,7 @@ public class Tweet {
     }
 
     /**
-     * Rotates the photo of this post 90 degrees counter clockwise
+     * Rotates the photo of this tweet 90 degrees counter clockwise
      *
      * @return The 2D color representation of the resized photo 
      */
@@ -416,13 +416,13 @@ public class Tweet {
     }
 
     /**
-     * Converts the photo of this post to a String.
+     * Converts the photo of this tweet to a String.
      * The returned String will be made of spaces where each pair of spaces represents
      * a pixel and is assigned a ansi color background value.
      *
      * @param The 2D color representation of the original photo 
      *
-     * @return The String representation of the photo of this post
+     * @return The String representation of the photo of this tweet
      */
     private String photoToString(Color[][] pixels) {
         String pic = "";
