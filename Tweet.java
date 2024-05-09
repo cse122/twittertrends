@@ -78,7 +78,7 @@ public class Tweet {
     }
 
     /**
-     * Gets the string representation of the resized photo.
+     * Returns the string representation of the resized photo.
      * <br>
      * <hr>
      * <strong>Example usage:</strong>
@@ -94,7 +94,7 @@ public class Tweet {
     }
 
     /**
-     * Gets the filename of the photo associated with this tweet.
+     * Returns the filename of the photo associated with this tweet.
      * <br>
      * <hr>
      * <strong>Example usage:</strong>
@@ -110,7 +110,7 @@ public class Tweet {
     }
 
     /**
-     * Gets the 2D array of {@link Color} objects representing the photo pixels.
+     * Returns the 2D array of {@link Color} objects representing the photo pixels.
      * <br>
      * <hr>
      * <strong>Example usage:</strong>
@@ -143,7 +143,7 @@ public class Tweet {
     }
 
     /**
-     * Gets the caption of this tweet.
+     * Returns the caption of this tweet.
      * <br>
      * <hr>
      * <strong>Example usage:</strong>
@@ -176,7 +176,7 @@ public class Tweet {
     }
 
     /**
-     * Gets the date when this tweet was posted.
+     * Returns the date when this tweet was posted.
      * <br>
      * <hr>
      * <strong>Example usage:</strong>
@@ -192,7 +192,7 @@ public class Tweet {
     }
 
     /**
-     * Gets the number of likes for this tweet.
+     * Returns the number of likes for this tweet.
      * <br>
      * <hr>
      * <strong>Example usage:</strong>
@@ -208,7 +208,7 @@ public class Tweet {
     }
 
     /**
-     * Gets the number of retweets on the tweet.
+     * Returns the number of retweets on the tweet.
      * <br>
      * <hr>
      * <strong>Example Usage:</strong>
@@ -272,7 +272,7 @@ public class Tweet {
     }
 
     /**
-     * Provides a string representation of this tweet, including its photo (represented as colored spaces),
+     * Returns a string representation of this tweet, including its photo (represented as colored spaces),
      * caption, number of likes, retweets, and the date.
      * <br>
      * <hr>
@@ -305,7 +305,7 @@ public class Tweet {
      * {@snippet :
      * Tweet tweet1 = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
      * Tweet tweet2 = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
-     * System.out.println("Are both tweets equal?? " + tweet1.equals(tweet2)); // Output: true if all attributes are identical!
+     * System.out.println("Are both tweets equal? " + tweet1.equals(tweet2)); // Output: true if all attributes are identical!
      * }
      * <hr>
      * @param other The object to compare against
