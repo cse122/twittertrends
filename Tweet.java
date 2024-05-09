@@ -8,7 +8,7 @@ import java.util.*;
  */
 public class Tweet {
 
-    /** The desired size for the resized photo. */
+    /** The desired size for the resized photo. You may change this value as you see fit to resize the photo! */
     public static final int PHOTO_SIZE = 17;
 
     private Picture photo;   // The photo associated with the tweet
@@ -24,7 +24,7 @@ public class Tweet {
      * <hr>
      * <strong>Example Usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
+     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
      * }
      * <hr>
      * @param photoString  The file path of the photo
@@ -64,7 +64,7 @@ public class Tweet {
      * <hr>
      * <strong>Example Usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
+     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
      * }
      * <hr>
      * @param photoString The file path of the photo
@@ -83,7 +83,7 @@ public class Tweet {
      * <hr>
      * <strong>Example usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
+     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
      * System.out.println(tweet.getPhotoString()); // Output will be the color string representation of the photo.
      * }
      * <hr>
@@ -99,7 +99,7 @@ public class Tweet {
      * <hr>
      * <strong>Example usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
+     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
      * System.out.println(tweet.getFilename()); // Output: "gumball/flowers.png"
      * }
      * <hr>
@@ -115,7 +115,7 @@ public class Tweet {
      * <hr>
      * <strong>Example usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
+     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
      * Color[][] pixels = tweet.getPhotoPixels();
      * }
      * <hr>
@@ -131,7 +131,7 @@ public class Tweet {
      * <hr>
      * <strong>Example usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
+     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
      * Color[][] newPixels = new Color[17][17];
      * tweet.updatePhoto(newPixels);
      * }
@@ -148,8 +148,8 @@ public class Tweet {
      * <hr>
      * <strong>Example usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
-     * System.out.println(tweet.getCaption()); // Output: "Gumball :D"
+     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
+     * System.out.println(tweet.getCaption()); // Output: "Gumball with flowers!"
      * }
      * <hr>
      * @return The caption of the tweet
@@ -164,7 +164,7 @@ public class Tweet {
      * <hr>
      * <strong>Example usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
+     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
      * tweet.updateCaption("CSE 122 rocks!");
      * System.out.println(tweet.getCaption()); // Output: "CSE 122 rocks!"
      * }
@@ -181,8 +181,8 @@ public class Tweet {
      * <hr>
      * <strong>Example usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
-     * System.out.println(tweet.getDate()); // Output: "2024-05-07"
+     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
+     * System.out.println(tweet.getDate()); // Output: "2024-01-22"
      * }
      * <hr>
      * @return The date of the tweet
@@ -197,7 +197,7 @@ public class Tweet {
      * <hr>
      * <strong>Example usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
+     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
      * System.out.println(tweet.getLikes()); // Output: 250
      * }
      * <hr>
@@ -213,7 +213,7 @@ public class Tweet {
      * <hr>
      * <strong>Example Usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
+     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
      * System.out.println("Retweets: " + tweet.getRetweets()); // Output: Retweets: 40
      * }
      * <hr>
@@ -229,7 +229,7 @@ public class Tweet {
      * <hr>
      * <strong>Example Usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
+     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
      * tweet.likeTweet();
      * System.out.println("Likes after liking the tweet: " + tweet.getLikes()); // Output: 251
      * }
@@ -245,7 +245,7 @@ public class Tweet {
      * <hr>
      * <strong>Example Usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
+     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
      * tweet.dislikeTweet();
      * System.out.println("Likes after disliking the tweet: " + tweet.getLikes()); // Output: 249
      * }
@@ -261,7 +261,7 @@ public class Tweet {
      * <hr>
      * <strong>Example Usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
+     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
      * tweet.retweetTweet();
      * System.out.println("Retweets after one retweet: " + tweet.getRetweets()); // Output: 41
      * }
@@ -278,11 +278,11 @@ public class Tweet {
      * <hr>
      * <strong>Example Usage:</strong>
      * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
+     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
      * System.out.println(tweet.toString());
      * // Output might be:
-     * // 2024-05-07
-     * // Gumball :D
+     * // 2024-01-22
+     * // Gumball with flowers!
      * // [Photo representation]
      * // Likes: 250  |  Retweets: 40
      * }
@@ -303,9 +303,9 @@ public class Tweet {
      * <hr>
      * <strong>Example Usage:</strong>
      * {@snippet :
-     * Tweet tweet1 = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
-     * Tweet tweet2 = new Tweet("gumball/flowers.png", "Gumball :D", "2024-05-07", 250, 40);
-     * System.out.println("Are both tweets equal?? " + tweet1.equals(tweet2)); // Output: true if all attributes are identical
+     * Tweet tweet1 = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
+     * Tweet tweet2 = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
+     * System.out.println("Are both tweets equal?? " + tweet1.equals(tweet2)); // Output: true if all attributes are identical!
      * }
      * <hr>
      * @param other The object to compare against
