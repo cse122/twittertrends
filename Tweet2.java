@@ -19,52 +19,14 @@ public class Tweet {
     private int retweets;    // The number of times the number of retweets
 
     /**
-     * Constructs a new {@code Tweet} with a complete set of attributes including a picture object, file path, caption, 
-     * publication date, likes, and retweets. This constructor initializes a tweet with a detailed context of its visual 
-     * and text content along with its social metrics.
-     * <br>
-     * <hr>
-     * <strong>Example Usage:</strong>
-     * {@snippet :
-     * Picture photo = new Picture("gumball/flowers.png");
-     * Tweet tweet = new Tweet(photo, "gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
-     * }
-     * <hr>
-     * @param photo        The {@link Picture} object representing the photo associated with the tweet.
-     * @param photoString  The file path of the photo.
-     * @param caption      The caption of the tweet.
-     * @param date         The date of the tweet.
-     * @param likes        The number of likes on the tweet.
-     * @param retweets     The number of retweets on the tweet.
-     * @throws IllegalArgumentException If retweets are less than zero, ensuring the integrity of retweet data.
-     */
-    public Tweet(Picture photo, String photoString, String caption, String date, int likes, int retweets) {
-        if (retweets < 0) {
-            throw new IllegalArgumentException("Retweets are less than zero: " + retweets);
-        }
-        // set fields
-        this.photo = photo;
-        this.filename = photoString;
-        this.caption = caption;
-        this.date = date;
-        this.likes = likes;
-        this.retweets = retweets;
-    }
-
-    /**
      * Constructs a new {@code Tweet} with specified photo, caption, date, likes, and retweets.
-     * <br>
-     * <hr>
-     * <strong>Example Usage:</strong>
-     * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
-     * }
-     * <hr>
+     * 
      * @param photoString  The file path of the photo
      * @param caption      The caption of the tweet
      * @param date         The date of the tweet
      * @param likes        The number of likes on the tweet
      * @param retweets     The number of retweets on the tweet
+     * 
      * @throws IllegalArgumentException If retweets are less than 0 or photo dimensions are smaller than {@code PHOTO_SIZE}
      */
     public Tweet(String photoString, String caption, String date, int likes, int retweets) {
@@ -93,16 +55,11 @@ public class Tweet {
     /**
      * Constructs a new {@code Tweet} with a specified photo, caption, and date where it
      * automatically assigns random values for likes and retweets.
-     * <br>
-     * <hr>
-     * <strong>Example Usage:</strong>
-     * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
-     * }
-     * <hr>
+     * 
      * @param photoString The file path of the photo
      * @param caption     The caption of the tweet
      * @param date        The date of the tweet
+     * 
      * @throws IllegalArgumentException If photo dimensions are smaller than {@code PHOTO_SIZE}
      */
     public Tweet(String photoString, String caption, String date) {
@@ -112,14 +69,7 @@ public class Tweet {
 
     /**
      * Returns the string representation of the resized photo.
-     * <br>
-     * <hr>
-     * <strong>Example usage:</strong>
-     * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
-     * System.out.println(tweet.getPhotoString()); // Output will be the color string representation of the photo.
-     * }
-     * <hr>
+     * 
      * @return The string representation of the resized photo
      */
     public String getPhotoString() {
@@ -128,14 +78,7 @@ public class Tweet {
 
     /**
      * Returns the filename of the photo associated with this tweet.
-     * <br>
-     * <hr>
-     * <strong>Example usage:</strong>
-     * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
-     * System.out.println(tweet.getFilename()); // Output: "gumball/flowers.png"
-     * }
-     * <hr>
+     * 
      * @return  The filename of this Tweets's photo
      */
     public String getFilename() {
@@ -144,14 +87,7 @@ public class Tweet {
 
     /**
      * Returns the 2D array of {@link Color} objects representing the photo pixels.
-     * <br>
-     * <hr>
-     * <strong>Example usage:</strong>
-     * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
-     * Color[][] pixels = tweet.getPhotoPixels();
-     * }
-     * <hr>
+     * 
      * @return A 2D array of {@link Color} objects representing the photo.
      */
     public Color[][] getPhotoPixels() {
@@ -160,15 +96,7 @@ public class Tweet {
 
     /**
      * Updates the photo with a new set of pixels.
-     * <br>
-     * <hr>
-     * <strong>Example usage:</strong>
-     * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
-     * Color[][] newPixels = new Color[17][17];
-     * tweet.updatePhoto(newPixels);
-     * }
-     * <hr>
+     * 
      * @param pixels The new 2D array of {@link Color} objects for the photo
      */
     public void updatePhoto(Color[][] pixels) {
@@ -177,14 +105,7 @@ public class Tweet {
 
     /**
      * Returns the caption of this tweet.
-     * <br>
-     * <hr>
-     * <strong>Example usage:</strong>
-     * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
-     * System.out.println(tweet.getCaption()); // Output: "Gumball with flowers!"
-     * }
-     * <hr>
+     * 
      * @return The caption of the tweet
      */
     public String getCaption() {
@@ -193,15 +114,7 @@ public class Tweet {
 
     /**
      * Updates the caption of this tweet to be the new provided caption.
-     * <br>
-     * <hr>
-     * <strong>Example usage:</strong>
-     * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
-     * tweet.updateCaption("CSE 122 rocks!");
-     * System.out.println(tweet.getCaption()); // Output: "CSE 122 rocks!"
-     * }
-     * <hr>
+     * 
      * @param caption The new caption to set for the tweet.
      */
     public void updateCaption(String caption) {
@@ -210,14 +123,7 @@ public class Tweet {
 
     /**
      * Returns the date when this tweet was posted.
-     * <br>
-     * <hr>
-     * <strong>Example usage:</strong>
-     * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
-     * System.out.println(tweet.getDate()); // Output: "2024-01-22"
-     * }
-     * <hr>
+     * 
      * @return The date of the tweet
      */
     public String getDate() {
@@ -226,14 +132,7 @@ public class Tweet {
 
     /**
      * Returns the number of likes for this tweet.
-     * <br>
-     * <hr>
-     * <strong>Example usage:</strong>
-     * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
-     * System.out.println(tweet.getLikes()); // Output: 250
-     * }
-     * <hr>
+     * 
      * @return The number of likes on the tweet
      */
     public int getLikes() {
@@ -242,14 +141,7 @@ public class Tweet {
 
     /**
      * Returns the number of retweets on the tweet.
-     * <br>
-     * <hr>
-     * <strong>Example Usage:</strong>
-     * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
-     * System.out.println("Retweets: " + tweet.getRetweets()); // Output: Retweets: 40
-     * }
-     * <hr>
+     * 
      * @return The number of retweets on the tweet
      */
     public int getRetweets() {
@@ -258,15 +150,6 @@ public class Tweet {
 
     /**
      * Increases the number of likes on this tweet by 1.
-     * <br>
-     * <hr>
-     * <strong>Example Usage:</strong>
-     * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
-     * tweet.likeTweet();
-     * System.out.println("Likes after liking the tweet: " + tweet.getLikes()); // Output: 251
-     * }
-     * <hr>
      */
     public void likeTweet() {
         this.likes++;
@@ -274,15 +157,6 @@ public class Tweet {
 
     /**
      * Decreases the number of likes on this tweet by 1.
-     * <br>
-     * <hr>
-     * <strong>Example Usage:</strong>
-     * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
-     * tweet.dislikeTweet();
-     * System.out.println("Likes after disliking the tweet: " + tweet.getLikes()); // Output: 249
-     * }
-     * <hr>
      */
     public void dislikeTweet() {
         this.likes--;
@@ -290,15 +164,6 @@ public class Tweet {
 
     /**
      * Increases the number of retweets on this tweet by 1.
-     * <br>
-     * <hr>
-     * <strong>Example Usage:</strong>
-     * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
-     * tweet.retweetTweet();
-     * System.out.println("Retweets after one retweet: " + tweet.getRetweets()); // Output: 41
-     * }
-     * <hr>
      */
     public void retweetTweet() {
         this.retweets++;
@@ -307,19 +172,7 @@ public class Tweet {
     /**
      * Returns a string representation of this tweet, including its photo (represented as colored spaces),
      * caption, number of likes, retweets, and the date.
-     * <br>
-     * <hr>
-     * <strong>Example Usage:</strong>
-     * {@snippet :
-     * Tweet tweet = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
-     * System.out.println(tweet.toString());
-     * // Output might be:
-     * // 2024-01-22
-     * // Gumball with flowers!
-     * // [Photo representation]
-     * // Likes: 250  |  Retweets: 40
-     * }
-     * <hr>
+     * 
      * @return The string representation of the tweet
      */
     public String toString() {
@@ -332,16 +185,9 @@ public class Tweet {
     /**
      * Compares this tweet with another object to determine if they are equal.
      * Two tweets are considered equal if they have the same photo, caption, date, number of likes, and number of retweets. 
-     * <br>
-     * <hr>
-     * <strong>Example Usage:</strong>
-     * {@snippet :
-     * Tweet tweet1 = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
-     * Tweet tweet2 = new Tweet("gumball/flowers.png", "Gumball with flowers!", "2024-01-22", 250, 40);
-     * System.out.println("Are both tweets equal? " + tweet1.equals(tweet2)); // Output: true if all attributes are identical!
-     * }
-     * <hr>
+     * 
      * @param other The object to compare against
+     * 
      * @return True if the other object is a Tweet with identical photo, caption, date, likes, and retweets
      */
     public boolean equals(Object other) {
